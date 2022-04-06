@@ -38,6 +38,10 @@ The dataset has 25.723 lines and 24 columns.
 
 Cleanned Dataset has 6.302 lines and 23 columns.
 
+<h1 align="left"> Libraries </h1>
+
+I used in this analysis: pandas, numpy, re, seaborn, pandas_profiling.
+
 <h1 align="left"> 1. Are there more fatal than non-fatal attacks? </h1>
 
 This answer needs a clean column called: Fatal (Y/N).
@@ -85,10 +89,18 @@ Female Shark Attacks: 637 attacks / 11.11 %
 
 
 
+
+
+
+
+
+
 <h2 align="left"> OTHERS CONCLUSIONS </h2>
 Crossing valid lines related to fatal attacks (5.692) and attacks by gender (5.735) I extracted a double groupby:
 
-![Graf2](https://user-images.githubusercontent.com/99502330/161891257-bbde61ee-30f4-455f-be43-e5904ce6ce8f.png)
+
+![Graf2](https://user-images.githubusercontent.com/99502330/161976678-71fc281b-da1f-4baf-a9a8-c34394f00f42.png)
+
 
 <h1 align="left"> 3. Are shark attacks influenced by hemisphere? </h1>
 
@@ -98,7 +110,7 @@ Even though this column does not provide the information needed to answer the qu
 ![sharks-swimming](https://user-images.githubusercontent.com/99502330/161890934-c355c48d-616a-4ac3-aa84-67fa93ead0bc.gif)
 
 I used 'unique' to discover the values into the main database (199 countries) and compared (merge) with the database of coordinates. I used 'mask' and 'loc'to update wrong values.
-Countries after cleanning database: 142 
+Countries after cleanning database: 141 
 
 CONCLUSION: There are more shark attacks in Northern Hemisphere
 
@@ -110,6 +122,9 @@ Hemisphere Southern: 2774 attacks / 44.86 %
 
 *** Attacks with Unknown Hemisphere: 119 attacks / 1.89 % (disregarded in the previous analysis)
 
+
+
+![Graf3](https://user-images.githubusercontent.com/99502330/161976533-982af23b-18c2-41e4-8685-365919413970.png)
 
 
 
