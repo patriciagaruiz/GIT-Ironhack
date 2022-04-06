@@ -27,11 +27,11 @@ Dataset available at: https://www.kaggle.com/datasets/teajay/global-shark-attack
 
 The dataset has 25.723 lines and 24 columns.
 
-<h1 align="left"> Heatmap before dropping duplicate values </h1>
+<h1 align="left"> Heatmap before dropping duplicate values and empty columns </h1>
 
 ![Heatmap_before](https://user-images.githubusercontent.com/99502330/161841837-245a2a81-1254-468b-85cd-5caeb78c776a.png)
 
-<h1 align="left"> Heatmap after dropping duplicate values </h1>
+<h1 align="left"> Heatmap after dropping duplicate values and empty columns </h1>
 
 ![Heatmap_after](https://user-images.githubusercontent.com/99502330/161843475-aaa14977-13fe-4672-b22b-6c18c98d915e.png)
 
@@ -42,7 +42,7 @@ Cleanned Dataset has 6.302 lines and 23 columns.
 
 This answer needs a clean column called: Fatal (Y/N).
 First of all, I used 'groupby' to discover the number of lines per value. Here the results: 2017, N, M, Y, y, UNKOWN.
-I read the lines with values different from Y or N and changed the wrong values by Y, N or X (for unclear cases where the identification was not possible).
+I read the lines with values different from Y or N and changed (with mask and loc) the wrong values by Y, N or X (for unclear cases where the identification was not possible).
 
 CONCLUSION: There are more non-fatal attacks according to the data.
 
@@ -63,7 +63,7 @@ Non Fatal Shark Attacks: 4303 attacks / 75.6 %
 
 This answer needs a clean column called: Sex.
 First of all, I used 'groupby' to discover the number of lines per value. Here the results: . , F, M, N, lli.
-I read the lines with values different from M or F and changed the wrong values by M, F or X (for unclear cases where the identification was not possible).
+I read the lines with values different from M or F and changed (with mask and loc) the wrong values by M, F or X (for unclear cases where the identification was not possible).
 
 CONCLUSION: There are more attacks to male according to the data.
 
@@ -82,6 +82,9 @@ Female Shark Attacks: 637 attacks / 11.11 %
 ![shark_boat_men](https://user-images.githubusercontent.com/99502330/161890970-fcc257d9-9f09-42db-b784-7946a1875867.gif)
 
 
+
+
+
 <h2 align="left"> OTHERS CONCLUSIONS </h2>
 Crossing valid lines related to fatal attacks (5.692) and attacks by gender (5.735) I extracted a double groupby:
 
@@ -94,8 +97,8 @@ Even though this column does not provide the information needed to answer the qu
 
 ![sharks-swimming](https://user-images.githubusercontent.com/99502330/161890934-c355c48d-616a-4ac3-aa84-67fa93ead0bc.gif)
 
-I used 'unique' to discover the values into the main database (199 countries) and compared with the database of coordinates.
-Countries after cleanning database: 142
+I used 'unique' to discover the values into the main database (199 countries) and compared (merge) with the database of coordinates. I used 'mask' and 'loc'to update wrong values.
+Countries after cleanning database: 142 
 
 CONCLUSION: There are more shark attacks in Northern Hemisphere
 
