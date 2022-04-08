@@ -114,17 +114,18 @@ Countries after cleanning database: 141
 
 CONCLUSION: There are more shark attacks in Northern Hemisphere
 
-Total Shark Attacks with Known Hemisphere: 6183 attacks
+Total Shark Attacks with Known Hemisphere: 6206 attacks
 
-Hemisphere Northern: 3409 attacks / 55.14 %
+Hemisphere Northern: 3432 attacks / 55.3 %
 
-Hemisphere Southern: 2774 attacks / 44.86 %
+Hemisphere Southern: 2774 attacks / 44.7 %
 
-*** Attacks with Unknown Hemisphere: 119 attacks / 1.89 % (disregarded in the previous analysis)
+*** Attacks with Unknown Hemisphere: 96 attacks / 1.52 % (not inside the previous analise)
 
 
 
-![Graf3](https://user-images.githubusercontent.com/99502330/161976533-982af23b-18c2-41e4-8685-365919413970.png)
+![Graf4](https://user-images.githubusercontent.com/99502330/161987256-44dd2891-dba5-4f7c-b23c-7ff58841f4a2.png)
+
 
 
 
